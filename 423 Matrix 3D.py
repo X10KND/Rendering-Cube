@@ -153,7 +153,7 @@ rot_y = 0
 rot_z = 0
 
 while True:
-    prev_time = time.time()
+    prev_time = time.perf_counter()
     clock.tick(60)
 
     for event in pygame.event.get():
@@ -223,4 +223,4 @@ while True:
     #draw_grid_3D()
     pygame.display.update()
 
-    print(f"FPS: {1 / (time.time() - prev_time)}")
+    print(f"FPS: {1 / (time.perf_counter() - prev_time)}")
